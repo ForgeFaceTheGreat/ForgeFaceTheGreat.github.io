@@ -18,7 +18,7 @@ p
 
 html
 {
-    background-image: url("Ark\ Weapon\ Images/ForgeFaceTheGreat.github.io\Ark Weapon Images/vecteezy_horizontal-black-stone-texture-for-pattern-and-background_2223726.jpg");
+    background-image: url("images/vecteezy_horizontal-black-stone-texture-for-pattern-and-background_2223726.jpg");
     color: azure;
 }
 
@@ -41,15 +41,9 @@ html
 {
     background: slategray;
     padding: 5px;
-    width: 250px;
+    width: 300px;
     height: 150px;
     margin: 10px;
-    
-    /* line-height: 50px; */
-    /* color: white; */
-    /* font-weight: bold; */
-    /* font-size: 3em; */
-    /* text-align: center; */
 }
 
 .float
@@ -82,12 +76,27 @@ html
     /* border-spacing: 10px; */
 }
 
-.col
-{
-    padding: 0px;
-}
 .pic
 {
-    width: 100%;
-    height: 100%;
+    width: 55%;
+    height: 55%;
+}
+
+.column
+{
+    float: left;
+    width: 50%;
+}
+  
+  /* Clear floats after the columns */
+.row:after
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.input
+{
+    width: 35%;
 }

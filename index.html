@@ -4,461 +4,268 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script type = "text/javascript" src="function.js"></script>  
         <link rel="stylesheet" href="stylesheet.css">
-     </head>
+        <title>Ark: Damage Calculator</title>
+        <link rel="icon" type="image/png" href="images/SeekPng.com_ark-png_2067431.png" sizes="32x32" />
+    </head>
 
     <body>
         <div class="header">
             <h1>
-                Hello World!
+                Ark: Weapon Damage Calculator
             </h1>
         </div>
 
         <!-- Modified: Responsive List Layout (Flexbox vs Float vs Inline-Block)
             by Hector Guo https://codepen.io/hectorguo/pen/BoZEyW -->
         <ul class="container float">
-          <li class="item float-item">
-              <table class="inner">
-                <tr>
-                    <td class="col"><img class="pic" src="Ark Weapon Images\Melee_Damage.png"></td>
-                    <td class="col"></td>
-                </tr>
-                    <tr>
-                      <td class="col">Hands</td>
-                      <td class="col"></td>
-                  </tr>
-                  <tr>
-                      <td class="col">Damage: 8</td>
-                      <td class="col">Modifier: 100%</td>
-                  </tr>
-              </table>
-          </li>
-          <li class="item float-item">2</li>
-          <li class="item float-item">3</li>
-          <li class="item float-item">4</li>
-          <li class="item float-item">5</li>
+            <li class="item float-item"> <!-- Hands 0 -->
+                <div class="row">
+                    <form action=""></form>
+                    <div class="column">
+                        <h2><script>document.write(names[0])</script></h2>
+                        Damage: <script>document.write(damage[0])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Handsmod" oninput="meleeDmg(0)">%<br>
+                        Melee: <input class="input" type="number" value="100" id="Handshum" oninput="meleeDmg(0)">%
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Melee_Damage.png"><br>
+                        <div id="Hands"><script>meleeDmg(0)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Stone Pick 1 -->
+                <div class="row">
+                    <form action=""></form>
+                    <div class="column">
+                        <h2><script>document.write(names[1])</script></h2>
+                        Damage: <script>document.write(damage[1])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Stone Pickmod" oninput="meleeDmg(1)">%<br>
+                        Melee: <input class="input" type="number" value="100" id="Stone Pickhum" oninput="meleeDmg(1)">%
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Stone_Pick.png">
+                        <div id="Stone Pick"><script>meleeDmg(1)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Torch 2 -->
+                <div class="row">
+                    <form action=""></form>
+                    <div class="column">
+                        <h2><script>document.write(names[2])</script></h2>
+                        Damage: <script>document.write(damage[2])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Torchmod" oninput="meleeDmg(2)">%<br>
+                        Melee: <input class="input" type="number" value="100" id="Torchhum" oninput="meleeDmg(2)">%
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Torch.png"><br>
+                        <div id="Torch"><script>meleeDmg(2)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Stone Hatchet 3 -->
+                 <div class="row">
+                    <form action=""></form>
+                    <div class="column">
+                        <h2><script>document.write(names[3])</script></h2>
+                        Damage: <script>document.write(damage[3])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Stone Hatchetmod" oninput="meleeDmg(3)">%<br>
+                        Melee: <input class="input" type="number" value="100" id="Stone Hatchethum" oninput="meleeDmg(3)">%
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Stone_Hatchet.png"><br>
+                        <div id="Stone Hatchet"><script>meleeDmg(3)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Spear 4 -->
+                <div class="row">
+                    <form action=""></form>
+                    <div class="column">
+                        <h2><script>document.write(names[4])</script></h2>
+                        Damage: <script>document.write(damage[4])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Spearmod" oninput="meleeDmg(4)">%<br>
+                        Melee: <input class="input" type="number" value="100" id="Spearhum" oninput="meleeDmg(4)">%
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Spear.png"><br>
+                        <div id="Spear"><script>meleeDmg(4)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Wooden Club 5 -->
+                <div class="row">
+                    <form action=""></form>
+                    <div class="column">
+                        <h2><script>document.write(names[5])</script></h2>
+                        Damage: <script>document.write(damage[5])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Wooden Clubmod" oninput="meleeDmg(5)">%<br>
+                        Melee: <input class="input" type="number" value="100" id="Wooden Clubhum" oninput="meleeDmg(5)">%
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Wooden_Club.png"><br>
+                        <div id="Wooden Club"><script>meleeDmg(5)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Slingshot 6 -->
+                <div class="row">
+                    <form action=""></form>
+                    <div class="column">
+                        <h2><script>document.write(names[6])</script></h2>
+                        Damage: <script>document.write(damage[6])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Slingshotmod" oninput="meleeDmg(6)">%<br>
+                        Melee: <input class="input" type="number" value="100" id="Slingshothum" oninput="meleeDmg(6)">%
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Slingshot.png"><br>
+                        <div id="Slingshot"><script>meleeDmg(6)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Bow-Stone 7 -->
+                <div class="row">
+                    <form action=""></form>
+                    <div class="column">
+                        <h2><script>document.write(names[7])</script></h2>
+                        Damage: <script>document.write(damage[7])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Bow-Stonemod" oninput="meleeDmg(7)">%<br>
+                        Melee: <input class="input" type="number" value="100" id="Bow-Stonehum" oninput="meleeDmg(7)">%
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Bow_Stone_Arrow.png"><br>
+                        <div id="Bow-Stone"><script>meleeDmg(7)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Bow-Tranq 8 -->
+                <div class="row">
+                    <form action=""></form>
+                    <div class="column">
+                        <h2><script>document.write(names[8])</script></h2>
+                        Damage: <script>document.write(damage[8])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Bow-Tranqmod" oninput="meleeDmg(8)">%<br>
+                        Melee: <input class="input" type="number" value="100" id="Bow-Tranqhum" oninput="meleeDmg(8)">%
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Bow_Tranq_Arrow.png"><br>
+                        <div id="Bow-Tranq"><script>meleeDmg(8)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Metal Pick 9 -->
+                <div class="row">
+                    <form action=""></form>
+                    <div class="column">
+                        <h2><script>document.write(names[9])</script></h2>
+                        Damage: <script>document.write(damage[9])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Metal Pickmod" oninput="meleeDmg(9)">%<br>
+                        Melee: <input class="input" type="number" value="100" id="Metal Pickhum" oninput="meleeDmg(9)">%
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Metal_Pick.png"><br>
+                        <div id="Metal Pick"><script>meleeDmg(9)</script></div>
+                    </div>
+                </div>
+            </li>
         </ul>
+        <!-- END--Hector Guo -->
         <p>
-            
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
-            aadsfffffffffffffffffffffffffffffffffffffffffffa aadsfffffffffffffffffffffffffffffffffffffffffffa
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdasasdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
+            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
 
         </p>
-        
+        <br><br>
         <!-- Stock photo link for free license -->
         <a class="stocklink" href="https://www.vecteezy.com/free-photos">Free Stock photos by Vecteezy</a>
     </body>

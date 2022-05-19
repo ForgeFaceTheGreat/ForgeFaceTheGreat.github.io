@@ -1,7 +1,30 @@
-function thisThang()
+const names = ["Hands", "Stone Pick", "Torch", "Stone Hatchet", "Spear",
+    "Wooden Club", "Slingshot", "Bow-Stone", "Bow-Tranq", "Metal Pick", 
+    "Metal Hatchet", "Pike", "Crossbow-Stone", "Crossbow-Tranq", "Simple Pistal",
+    "Sickle", "Metal Sword", "Longneck-Simple", "Longneck-Tranq", "Longneck-Shock",
+    "Shotgun", "Fab. Pistal", "Pump-Action", "Assault Rifle", "Compound Bow-Stone",
+    "Compound Bow-Tranq", "Compound Bow-Metal", "Fab. Sniper Rifle",
+    "Electric Prod", "Ranged Melee", "Tek Gauntlets", "Tek Sword",
+    "Tek Sword-Tek Gauntlets", "Tek Rifle", "Tek Railgun"];
+const damage = [8, 16, 15, 20, 30, 5, 14, 55, 20, 32, 40, 55, 95, 35, 63,
+    50, 90, 280, 26, 26, 64, 50, 46, 47, 74, 27, 202.5, 165, 1, 10, 265,
+    200, 280, 240, 935]
+
+function gunDmg(index)
 {
-        for (let iter = 0; iter < 10; iter++)
-        {
-            document.write("wds" + "<br>");
-        }
+    var mod = document.getElementById(names[index] + "mod").value;
+    mod = (damage[index] * (mod / 100));
+    mod = Math.round(((damage[index] * (mod / 100)) + Number.EPSILON) * 100) / 100;
+
+    return document.getElementById(names[index]).innerHTML = "Output: " + mod;
+}
+
+function meleeDmg(index)
+{
+    var mod = document.getElementById(names[index] + "mod").value;
+    var human = document.getElementById(names[index] + "hum").value;
+
+    var total = Math.round(((damage[index] * (mod / 100) * (human / 100)) + Number.EPSILON) * 100) / 100;
+
+    return document.getElementById(names[index]).innerHTML = "Output: " + total;
 }
