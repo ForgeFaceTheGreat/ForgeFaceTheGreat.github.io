@@ -9,18 +9,20 @@
     </head>
 
     <body>
-        <div class="header">
+        <!-- <div class="header"> -->
             <h1>
                 Ark: Weapon Damage Calculator
             </h1>
-        </div>
+        <!-- </div> -->
+        <center><p>This is a unoficial, completly free weapon damage calculator for Ark: Survival Evolved.
+            The calculator is based on the data found on the Ark <a href="https://ark.fandom.com/wiki/Base_Damage">wiki</a>.
+        </p></center>
 
         <!-- Modified: Responsive List Layout (Flexbox vs Float vs Inline-Block)
             by Hector Guo https://codepen.io/hectorguo/pen/BoZEyW -->
         <ul class="container float">
             <li class="item float-item"> <!-- Hands 0 -->
                 <div class="row">
-                    <form action=""></form>
                     <div class="column">
                         <h2><script>document.write(names[0])</script></h2>
                         Damage: <script>document.write(damage[0])</script><br>
@@ -36,7 +38,6 @@
             </li>
             <li class="item float-item"> <!-- Stone Pick 1 -->
                 <div class="row">
-                    <form action=""></form>
                     <div class="column">
                         <h2><script>document.write(names[1])</script></h2>
                         Damage: <script>document.write(damage[1])</script><br>
@@ -52,7 +53,6 @@
             </li>
             <li class="item float-item"> <!-- Torch 2 -->
                 <div class="row">
-                    <form action=""></form>
                     <div class="column">
                         <h2><script>document.write(names[2])</script></h2>
                         Damage: <script>document.write(damage[2])</script><br>
@@ -68,7 +68,6 @@
             </li>
             <li class="item float-item"> <!-- Stone Hatchet 3 -->
                  <div class="row">
-                    <form action=""></form>
                     <div class="column">
                         <h2><script>document.write(names[3])</script></h2>
                         Damage: <script>document.write(damage[3])</script><br>
@@ -84,7 +83,6 @@
             </li>
             <li class="item float-item"> <!-- Spear 4 -->
                 <div class="row">
-                    <form action=""></form>
                     <div class="column">
                         <h2><script>document.write(names[4])</script></h2>
                         Damage: <script>document.write(damage[4])</script><br>
@@ -100,7 +98,6 @@
             </li>
             <li class="item float-item"> <!-- Wooden Club 5 -->
                 <div class="row">
-                    <form action=""></form>
                     <div class="column">
                         <h2><script>document.write(names[5])</script></h2>
                         Damage: <script>document.write(damage[5])</script><br>
@@ -116,55 +113,48 @@
             </li>
             <li class="item float-item"> <!-- Slingshot 6 -->
                 <div class="row">
-                    <form action=""></form>
                     <div class="column">
                         <h2><script>document.write(names[6])</script></h2>
                         Damage: <script>document.write(damage[6])</script><br>
-                        Modifier: <input class="input" type="number" value="100" id="Slingshotmod" oninput="meleeDmg(6)">%<br>
-                        Melee: <input class="input" type="number" value="100" id="Slingshothum" oninput="meleeDmg(6)">%
+                        Modifier: <input class="input" type="number" value="100" id="Slingshotmod" oninput="gunDmg(6)">%<br>
                     </div>
                     <div class="column">
                         <br>
                         <img class="pic" src="images/Slingshot.png"><br>
-                        <div id="Slingshot"><script>meleeDmg(6)</script></div>
+                        <div id="Slingshot"><script>gunDmg(6)</script></div>
                     </div>
                 </div>
             </li>
             <li class="item float-item"> <!-- Bow-Stone 7 -->
                 <div class="row">
-                    <form action=""></form>
                     <div class="column">
                         <h2><script>document.write(names[7])</script></h2>
                         Damage: <script>document.write(damage[7])</script><br>
-                        Modifier: <input class="input" type="number" value="100" id="Bow-Stonemod" oninput="meleeDmg(7)">%<br>
-                        Melee: <input class="input" type="number" value="100" id="Bow-Stonehum" oninput="meleeDmg(7)">%
+                        Modifier: <input class="input" type="number" value="100" id="Bow-Stonemod" oninput="gunDmg(7)">%<br>
                     </div>
                     <div class="column">
                         <br>
                         <img class="pic" src="images/Bow_Stone_Arrow.png"><br>
-                        <div id="Bow-Stone"><script>meleeDmg(7)</script></div>
+                        <div id="Bow-Stone"><script>gunDmg(7)</script></div>
                     </div>
                 </div>
             </li>
             <li class="item float-item"> <!-- Bow-Tranq 8 -->
                 <div class="row">
-                    <form action=""></form>
                     <div class="column">
                         <h2><script>document.write(names[8])</script></h2>
                         Damage: <script>document.write(damage[8])</script><br>
-                        Modifier: <input class="input" type="number" value="100" id="Bow-Tranqmod" oninput="meleeDmg(8)">%<br>
-                        Melee: <input class="input" type="number" value="100" id="Bow-Tranqhum" oninput="meleeDmg(8)">%
+                        Modifier: <input class="input" type="number" value="100" id="Bow-Tranqmod" oninput="gunDmg(8)">%<br>
                     </div>
                     <div class="column">
                         <br>
                         <img class="pic" src="images/Bow_Tranq_Arrow.png"><br>
-                        <div id="Bow-Tranq"><script>meleeDmg(8)</script></div>
+                        <div id="Bow-Tranq"><script>gunDmg(8)</script></div>
                     </div>
                 </div>
             </li>
             <li class="item float-item"> <!-- Metal Pick 9 -->
                 <div class="row">
-                    <form action=""></form>
                     <div class="column">
                         <h2><script>document.write(names[9])</script></h2>
                         Damage: <script>document.write(damage[9])</script><br>
@@ -178,93 +168,372 @@
                     </div>
                 </div>
             </li>
+            <li class="item float-item"> <!-- Metal Hatchet 10 -->
+                <div class="row">
+                    <div class="column">
+                        <h2><script>document.write(names[10])</script></h2>
+                        Damage: <script>document.write(damage[10])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Metal Hatchetmod" oninput="meleeDmg(10)">%<br>
+                        Melee: <input class="input" type="number" value="100" id="Metal Hatchethum" oninput="meleeDmg(10)">%
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Metal_Hatchet.png"><br>
+                        <div id="Metal Hatchet"><script>meleeDmg(10)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Pike 11 -->
+                <div class="row">
+                    <div class="column">
+                        <h2><script>document.write(names[11])</script></h2>
+                        Damage: <script>document.write(damage[11])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Pikemod" oninput="meleeDmg(11)">%<br>
+                        Melee: <input class="input" type="number" value="100" id="Pikehum" oninput="meleeDmg(11)">%
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Pike.png"><br>
+                        <div id="Pike"><script>meleeDmg(11)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Crossbow-Stone 12 -->
+                <div class="row">
+                    <div class="column">
+                        <h2><script>document.write(names[12])</script></h2>
+                        Damage: <script>document.write(damage[12])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Crossbow-Stonemod" oninput="gunDmg(12)">%<br>
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Crossbow_Stone_Arrow.png"><br>
+                        <div id="Crossbow-Stone"><script>gunDmg(12)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Crossbow-Tranq 13 -->
+                <div class="row">
+                    <div class="column">
+                        <h2><script>document.write(names[13])</script></h2>
+                        Damage: <script>document.write(damage[13])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Crossbow-Tranqmod" oninput="gunDmg(13)">%<br>
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Crossbow_Tranq_Arrow.png"><br>
+                        <div id="Crossbow-Tranq"><script>gunDmg(13)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Simple Pistol 14 -->
+                <div class="row">
+                    <div class="column">
+                        <h2><script>document.write(names[14])</script></h2>
+                        Damage: <script>document.write(damage[14])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Simple Pistolmod" oninput="gunDmg(14)">%<br>
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Simple_Pistol.png"><br>
+                        <div id="Simple Pistol"><script>gunDmg(14)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Sickle 15 -->
+                <div class="row">
+                    <div class="column">
+                        <h2><script>document.write(names[15])</script></h2>
+                        Damage: <script>document.write(damage[15])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Sicklemod" oninput="meleeDmg(15)">%<br>
+                        Melee: <input class="input" type="number" value="100" id="Sicklehum" oninput="meleeDmg(15)">%
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Metal_Sickle.png"><br>
+                        <div id="Sickle"><script>meleeDmg(15)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Metal Sword 16 -->
+                <div class="row">
+                    <div class="column">
+                        <h2><script>document.write(names[16])</script></h2>
+                        Damage: <script>document.write(damage[16])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Metal Swordmod" oninput="meleeDmg(16)">%<br>
+                        Melee: <input class="input" type="number" value="100" id="Metal Swordhum" oninput="meleeDmg(16)">%
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Sword.png"><br>
+                        <div id="Metal Sword"><script>meleeDmg(16)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Longneck-Simple 17 -->
+                <div class="row">
+                    <div class="column">
+                        <h2><script>document.write(names[17])</script></h2>
+                        Damage: <script>document.write(damage[17])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Longneck-Simplemod" oninput="gunDmg(17)">%<br>
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Longneck_Rifle_Simple_Ammo.png"><br>
+                        <div id="Longneck-Simple"><script>gunDmg(17)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Longneck-Tranq Dart 18 -->
+                <div class="row">
+                    <div class="column">
+                        <h2><script>document.write(names[18])</script></h2>
+                        Damage: <script>document.write(damage[18])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Longneck-Tranq Dartmod" oninput="gunDmg(18)">%<br>
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Longneck_Rifle_Tranq_Dart.png"><br>
+                        <div id="Longneck-Tranq Dart"><script>gunDmg(18)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Longneck-Shocking 19 -->
+                <div class="row">
+                    <div class="column">
+                        <h2><script>document.write(names[19])</script></h2>
+                        Damage: <script>document.write(damage[19])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Longneck-Shockingmod" oninput="gunDmg(19)">%<br>
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Longneck_Rifle_Shocking_Tranq.png"><br>
+                        <div id="Longneck-Shocking"><script>gunDmg(19)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Shotgun 20 -->
+                <div class="row">
+                    <div class="column">
+                        <h2><script>document.write(names[20])</script></h2>
+                        Damage: <script>document.write(damage[20])</script><br>
+                        Per Pellet (10): <script>document.write(damage[20] / 10)</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Shotgunmod" oninput="gunDmg(20), pelletDmg(20)">%<br>
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Shotgun.png"><br>
+                        <div id="Shotgun"><script>gunDmg(20)</script></div>
+                        <div id="Shotgunper"><script>pelletDmg(20)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Fabricated Pistol 21 -->
+                <div class="row">
+                    <div class="column">
+                        <h2><script>document.write(names[21])</script></h2>
+                        Damage: <script>document.write(damage[21])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Fabricated Pistolmod" oninput="gunDmg(21)">%<br>
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Fabricated_Pistol.png"><br>
+                        <div id="Fabricated Pistol"><script>gunDmg(21)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Pump-Action 22 -->
+                <div class="row">
+                    <div class="column">
+                        <h2><script>document.write(names[22])</script></h2>
+                        Damage: <script>document.write(damage[22])</script><br>
+                        Per Pellet (14): <script>document.write(damage[22] / 14)</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Pump-Actionmod" oninput="gunDmg(22), pelletDmg(22)">%<br>
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Pump-Action_Shotgun.png"><br>
+                        <div id="Pump-Action"><script>gunDmg(22)</script></div>
+                        <div id="Pump-Actionper"><script>pelletDmg(22)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Assault Rifle 23 -->
+                <div class="row">
+                    <div class="column">
+                        <h2><script>document.write(names[23])</script></h2>
+                        Damage: <script>document.write(damage[23])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Assault Riflemod" oninput="gunDmg(23)">%<br>
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Assault_Rifle.png"><br>
+                        <div id="Assault Rifle"><script>gunDmg(23)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Compound Bow-Stone 24 -->
+                <div class="row">
+                    <div class="column">
+                        <h2><script>document.write(names[24])</script></h2>
+                        Damage: <script>document.write(damage[24])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Compound Bow-Stonemod" oninput="gunDmg(24)">%<br>
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Compound_Bow_Stone_Arrow.png"><br>
+                        <div id="Compound Bow-Stone"><script>gunDmg(24)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Compound Bow-Tranq 25 -->
+                <div class="row">
+                    <div class="column">
+                        <h2><script>document.write(names[25])</script></h2>
+                        Damage: <script>document.write(damage[25])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Compound Bow-Tranqmod" oninput="gunDmg(25)">%<br>
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Compound_Bow_Tranq_Arrow.png"><br>
+                        <div id="Compound Bow-Tranq"><script>gunDmg(25)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Compound Bow-Metal 26 -->
+                <div class="row">
+                    <div class="column">
+                        <h2><script>document.write(names[26])</script></h2>
+                        Damage: <script>document.write(damage[26])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Compound Bow-Metalmod" oninput="gunDmg(26)">%<br>
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Compound_Bow_Metal_Arrow.png"><br>
+                        <div id="Compound Bow-Metal"><script>gunDmg(26)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Fabricated Sniper Rifle 27 -->
+                <div class="row">
+                    <div class="column">
+                        <h2><script>document.write(names[27])</script></h2>
+                        Damage: <script>document.write(damage[27])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Fabricated Sniper Riflemod" oninput="gunDmg(27)">%<br>
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Fabricated_Sniper_Rifle.png"><br>
+                        <div id="Fabricated Sniper Rifle"><script>gunDmg(27)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Electric Prod 28 -->
+                <div class="row">
+                    <div class="column">
+                        <h2><script>document.write(names[28])</script></h2>
+                        Damage: <script>document.write(damage[28])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Electric Prodmod" oninput="meleeDmg(28)">%<br>
+                        Melee: <input class="input" type="number" value="100" id="Electric Prodhum" oninput="meleeDmg(28)">%
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Electric_Prod.png"><br>
+                        <div id="Electric Prod"><script>meleeDmg(28)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Any Ranged Melee Attack 29 -->
+                <div class="row">
+                    <div class="column">
+                        <h2><script>document.write(names[29])</script></h2>
+                        Damage: <script>document.write(damage[29])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Any Ranged Melee Attackmod" oninput="meleeDmg(29)">%<br>
+                        Melee: <input class="input" type="number" value="100" id="Any Ranged Melee Attackhum" oninput="meleeDmg(29)">%
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Battle_Tartare.png"><br>
+                        <div id="Any Ranged Melee Attack"><script>meleeDmg(29)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Tek Gauntlets 30 -->
+                <div class="row">
+                    <div class="column">
+                        <h2><script>document.write(names[30])</script></h2>
+                        Damage: <script>document.write(damage[30])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Tek Gauntletsmod" oninput="meleeDmg(30)">%<br>
+                        Melee: <input class="input" type="number" value="100" id="Tek Gauntletshum" oninput="meleeDmg(30)">%
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Tek_Gauntlets.png"><br>
+                        <div id="Tek Gauntlets"><script>meleeDmg(30)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Tek Sword 31 -->
+                <div class="row">
+                    <div class="column">
+                        <h2><script>document.write(names[31])</script></h2>
+                        Damage: <script>document.write(damage[31])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Tek Swordmod" oninput="meleeDmg(31)">%<br>
+                        Melee: <input class="input" type="number" value="100" id="Tek Swordhum" oninput="meleeDmg(31)">%
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Tek_Sword.png"><br>
+                        <div id="Tek Sword"><script>meleeDmg(31)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Tek Sword w Tek Gauntlets 32 -->
+                <div class="row">
+                    <div class="column">
+                        <h2><script>document.write(names[32])</script></h2>
+                        Damage: <script>document.write(damage[32])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Tek Sword w Tek Gauntletsmod" oninput="meleeDmg(32)">%<br>
+                        Melee: <input class="input" type="number" value="100" id="Tek Sword w Tek Gauntletshum" oninput="meleeDmg(32)">%
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Tek_Gauntlets_Tek_Sword.png"><br>
+                        <div id="Tek Sword w Tek Gauntlets"><script>meleeDmg(32)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Tek Rifle 33 -->
+                <div class="row">
+                    <div class="column">
+                        <h2><script>document.write(names[33])</script></h2>
+                        Damage: <script>document.write(damage[33])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Tek Riflemod" oninput="gunDmg(33)">%<br>
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Tek_Rifle.png"><br>
+                        <div id="Tek Rifle"><script>gunDmg(33)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Tek Railgun 34 -->
+                <div class="row">
+                    <div class="column">
+                        <h2><script>document.write(names[34])</script></h2>
+                        Damage: <script>document.write(damage[34])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Tek Railgunmod" oninput="gunDmg(34)">%<br>
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Tek_Railgun.png"><br>
+                        <div id="Tek Railgun"><script>gunDmg(34)</script></div>
+                    </div>
+                </div>
+            </li>
         </ul>
         <!-- END--Hector Guo -->
-        <p>
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdasasdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-            asdfffffffasdfasdfasdfasdfasdfasdfasfdsdfasdfasdfasfdas
-
-        </p>
+        
         <br><br>
         <!-- Stock photo link for free license -->
         <a class="stocklink" href="https://www.vecteezy.com/free-photos">Free Stock photos by Vecteezy</a>

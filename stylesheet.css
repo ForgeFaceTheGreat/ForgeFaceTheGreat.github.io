@@ -1,7 +1,8 @@
-.header {
+h1
+{
     background: rgb(92, 99, 105);
     color: #f1f1f1;
-    font-size: large;
+    font-size: xx-large;
     padding-left: 5%;
     padding-top: 1%;
     width: 100%;
@@ -11,9 +12,13 @@
     top: 0;
 }
 
-p
+body
 {
-    padding: 5%;
+    margin-left: 0%;
+    margin-right: 0%;
+    max-width: 100%;
+    /* padding-left: 5%;
+    padding-right: 10%; */
 }
 
 html
@@ -32,9 +37,9 @@ html
     by Hector Guo https://codepen.io/hectorguo/pen/BoZEyW */
 .container
 {
-    list-style:none;
-    margin: 0;
-    padding: 0;
+    list-style: none;
+    /* margin: 50%; */
+    padding: 0%;
 }
 
 .item
@@ -42,13 +47,14 @@ html
     background: slategray;
     padding: 5px;
     width: 300px;
-    height: 150px;
+    height: 170px;
     margin: 10px;
+    border-radius: 4%;
 }
 
 .float
 {
-    max-width: 1200px;
+    max-width: 80%;
     margin: 0 auto;
 }
 
@@ -67,25 +73,22 @@ html
 }
 /* END--Hector Guo */
 
-.inner
-{
-    color: azure;
-    width: 10%;
-    height: 20%;
-    margin: 5%;
-    /* border-spacing: 10px; */
-}
-
 .pic
 {
     width: 55%;
     height: 55%;
 }
 
+h2
+{
+    margin-top: auto;
+    line-height: normal;
+}
 .column
 {
     float: left;
     width: 50%;
+    line-height: 1.6;
 }
   
   /* Clear floats after the columns */
@@ -99,4 +102,15 @@ html
 .input
 {
     width: 35%;
+}
+
+p
+{
+    font-size: x-large;
+    color: azure;
+}
+
+a
+{
+    color: azure;
 }
