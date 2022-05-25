@@ -24,6 +24,7 @@ body
 html
 {
     background-image: url("images/vecteezy_horizontal-black-stone-texture-for-pattern-and-background_2223726.jpg");
+    background-size: cover;
     color: azure;
 }
 
@@ -107,10 +108,21 @@ h2
 p
 {
     font-size: x-large;
-    color: azure;
+    color: white;
 }
 
 a
 {
-    color: azure;
+    color: white;
+}
+
+footer
+{
+    text-align: center;
+}
+
+.linkimg
+{
+    width: 5%;
+    height: 5%;
 }
