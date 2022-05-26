@@ -21,33 +21,35 @@
         <!-- Modified: Responsive List Layout (Flexbox vs Float vs Inline-Block)
             by Hector Guo https://codepen.io/hectorguo/pen/BoZEyW -->
         <ul class="container float">
-            <li class="item float-item"> <!-- Hands 0 -->
+            <li class="item float-item"> <!-- Hands 0 1.75 -->
                 <div class="row">
                     <div class="column">
                         <h2><script>document.write(names[0])</script></h2>
                         Damage: <script>document.write(damage[0])</script><br>
-                        Modifier: <input class="input" type="number" value="100" id="Handsmod" oninput="meleeDmg(0)">%<br>
-                        Melee: <input class="input" type="number" value="100" id="Handshum" oninput="meleeDmg(0)">%
+                        Modifier: <input class="input" type="number" value="100" id="Handsmod" oninput="meleeDmg(0), torpor(0, 1.75)">%<br>
+                        Melee: <input class="input" type="number" value="100" id="Handshum" oninput="meleeDmg(0), torpor(0, 1.75)">%
                     </div>
                     <div class="column">
                         <br>
                         <img class="pic" src="images/Melee_Damage.png"><br>
                         <div id="Hands"><script>meleeDmg(0)</script></div>
+                        <div id="Handstorp"><script>torpor(0, 1.75)</script></div>
                     </div>
                 </div>
             </li>
-            <li class="item float-item"> <!-- Stone Pick 1 -->
+            <li class="item float-item"> <!-- Stone Pick 1 0.5 -->
                 <div class="row">
                     <div class="column">
                         <h2><script>document.write(names[1])</script></h2>
                         Damage: <script>document.write(damage[1])</script><br>
-                        Modifier: <input class="input" type="number" value="100" id="Stone Pickmod" oninput="meleeDmg(1)">%<br>
-                        Melee: <input class="input" type="number" value="100" id="Stone Pickhum" oninput="meleeDmg(1)">%
+                        Modifier: <input class="input" type="number" value="100" id="Stone Pickmod" oninput="meleeDmg(1), torpor(1, 0.5)">%<br>
+                        Melee: <input class="input" type="number" value="100" id="Stone Pickhum" oninput="meleeDmg(1), torpor(1, 0.5)">%
                     </div>
                     <div class="column">
                         <br>
                         <img class="pic" src="images/Stone_Pick.png">
                         <div id="Stone Pick"><script>meleeDmg(1)</script></div>
+                        <div id="Stone Picktorp"><script>torpor(1, 0.5)</script></div>
                     </div>
                 </div>
             </li>
@@ -66,18 +68,19 @@
                     </div>
                 </div>
             </li>
-            <li class="item float-item"> <!-- Stone Hatchet 3 -->
+            <li class="item float-item"> <!-- Stone Hatchet 3 0.5 -->
                  <div class="row">
                     <div class="column">
                         <h2><script>document.write(names[3])</script></h2>
                         Damage: <script>document.write(damage[3])</script><br>
-                        Modifier: <input class="input" type="number" value="100" id="Stone Hatchetmod" oninput="meleeDmg(3)">%<br>
-                        Melee: <input class="input" type="number" value="100" id="Stone Hatchethum" oninput="meleeDmg(3)">%
+                        Modifier: <input class="input" type="number" value="100" id="Stone Hatchetmod" oninput="meleeDmg(3), torpor(3, 0.5)">%<br>
+                        Melee: <input class="input" type="number" value="100" id="Stone Hatchethum" oninput="meleeDmg(3), torpor(3, 0.5)">%
                     </div>
                     <div class="column">
                         <br>
                         <img class="pic" src="images/Stone_Hatchet.png"><br>
                         <div id="Stone Hatchet"><script>meleeDmg(3)</script></div>
+                        <div id="Stone Hatchettorp"><script>torpor(3, 0.5)</script></div>
                     </div>
                 </div>
             </li>
@@ -96,90 +99,110 @@
                     </div>
                 </div>
             </li>
-            <li class="item float-item"> <!-- Wooden Club 5 -->
+            <li class="item float-item"> <!-- Wooden Club 5 3.75 -->
                 <div class="row">
                     <div class="column">
                         <h2><script>document.write(names[5])</script></h2>
                         Damage: <script>document.write(damage[5])</script><br>
-                        Modifier: <input class="input" type="number" value="100" id="Wooden Clubmod" oninput="meleeDmg(5)">%<br>
-                        Melee: <input class="input" type="number" value="100" id="Wooden Clubhum" oninput="meleeDmg(5)">%
+                        Modifier: <input class="input" type="number" value="100" id="Wooden Clubmod" oninput="meleeDmg(5), torpor(5, 3.75)">%<br>
+                        Melee: <input class="input" type="number" value="100" id="Wooden Clubhum" oninput="meleeDmg(5), torpor(5, 3.75)">%
                     </div>
                     <div class="column">
                         <br>
                         <img class="pic" src="images/Wooden_Club.png"><br>
                         <div id="Wooden Club"><script>meleeDmg(5)</script></div>
+                        <div id="Wooden Clubtorp"><script>torpor(5, 3.75)</script></div>
                     </div>
                 </div>
             </li>
-            <li class="item float-item"> <!-- Slingshot 6 -->
+            <li class="item float-item"> <!-- Slingshot 6 1.75 -->
                 <div class="row">
                     <div class="column">
                         <h2><script>document.write(names[6])</script></h2>
                         Damage: <script>document.write(damage[6])</script><br>
-                        Modifier: <input class="input" type="number" value="100" id="Slingshotmod" oninput="gunDmg(6)">%<br>
+                        Modifier: <input class="input" type="number" value="100" id="Slingshotmod" oninput="gunDmg(6), gunTorpor(6, 1.75)">%<br>
                     </div>
                     <div class="column">
                         <br>
                         <img class="pic" src="images/Slingshot.png"><br>
                         <div id="Slingshot"><script>gunDmg(6)</script></div>
+                        <div id="Slingshottorp"><script>gunTorpor(6, 1.75)</script></div>
                     </div>
                 </div>
             </li>
-            <li class="item float-item"> <!-- Bow-Stone 7 -->
+            <li class="item float-item"> <!-- Bow-Stone Arrow 7 -->
                 <div class="row">
                     <div class="column">
                         <h2><script>document.write(names[7])</script></h2>
                         Damage: <script>document.write(damage[7])</script><br>
-                        Modifier: <input class="input" type="number" value="100" id="Bow-Stonemod" oninput="gunDmg(7)">%<br>
+                        Modifier: <input class="input" type="number" value="100" id="Bow-Stone Arrowmod" oninput="gunDmg(7)">%<br>
                     </div>
                     <div class="column">
                         <br>
                         <img class="pic" src="images/Bow_Stone_Arrow.png"><br>
-                        <div id="Bow-Stone"><script>gunDmg(7)</script></div>
+                        <div id="Bow-Stone Arrow"><script>gunDmg(7)</script></div>
                     </div>
                 </div>
             </li>
-            <li class="item float-item"> <!-- Bow-Tranq 8 -->
+            <li class="item float-item"> <!-- Bow-Tranq Arrow 8 4.50 -->
                 <div class="row">
                     <div class="column">
                         <h2><script>document.write(names[8])</script></h2>
                         Damage: <script>document.write(damage[8])</script><br>
-                        Modifier: <input class="input" type="number" value="100" id="Bow-Tranqmod" oninput="gunDmg(8)">%<br>
+                        Modifier: <input class="input" type="number" value="100" id="Bow-Tranq Arrowmod" oninput="gunDmg(8), gunTorpor(8, 4.50)">%<br>
                     </div>
                     <div class="column">
                         <br>
                         <img class="pic" src="images/Bow_Tranq_Arrow.png"><br>
-                        <div id="Bow-Tranq"><script>gunDmg(8)</script></div>
+                        <div id="Bow-Tranq Arrow"><script>gunDmg(8)</script></div>
+                        <div id="Bow-Tranq Arrowtorp"><script>gunTorpor(8, 4.50)</script></div>
                     </div>
                 </div>
             </li>
-            <li class="item float-item"> <!-- Metal Pick 9 -->
+            <li class="item float-item"> <!-- Bow-Toxicant Arrow 35 9 -->
+                <div class="row">
+                    <div class="column">
+                        <h2><script>document.write(names[35])</script>&nbsp;<img class="mobile" src="images/mobile.png" alt="mobile"></h2>
+                        Damage: <script>document.write(damage[35])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Bow-Toxicant Arrowmod" oninput="gunDmg(35), gunTorpor(35, 9)">%<br>
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Bow_Toxicant_Arrow.png"><br>
+                        <div id="Bow-Toxicant Arrow"><script>gunDmg(35)</script></div>
+                        <div id="Bow-Toxicant Arrowtorp"><script>gunTorpor(35, 9)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Metal Pick 9 0.5-->
                 <div class="row">
                     <div class="column">
                         <h2><script>document.write(names[9])</script></h2>
                         Damage: <script>document.write(damage[9])</script><br>
-                        Modifier: <input class="input" type="number" value="100" id="Metal Pickmod" oninput="meleeDmg(9)">%<br>
-                        Melee: <input class="input" type="number" value="100" id="Metal Pickhum" oninput="meleeDmg(9)">%
+                        Modifier: <input class="input" type="number" value="100" id="Metal Pickmod" oninput="meleeDmg(9), torpor(9, 0.5)">%<br>
+                        Melee: <input class="input" type="number" value="100" id="Metal Pickhum" oninput="meleeDmg(9), torpor(9, 0.5)">%
                     </div>
                     <div class="column">
                         <br>
                         <img class="pic" src="images/Metal_Pick.png"><br>
                         <div id="Metal Pick"><script>meleeDmg(9)</script></div>
+                        <div id="Metal Picktorp"><script>torpor(9, 0.5)</script></div>
                     </div>
                 </div>
             </li>
-            <li class="item float-item"> <!-- Metal Hatchet 10 -->
+            <li class="item float-item"> <!-- Metal Hatchet 10 0.5 -->
                 <div class="row">
                     <div class="column">
                         <h2><script>document.write(names[10])</script></h2>
                         Damage: <script>document.write(damage[10])</script><br>
-                        Modifier: <input class="input" type="number" value="100" id="Metal Hatchetmod" oninput="meleeDmg(10)">%<br>
-                        Melee: <input class="input" type="number" value="100" id="Metal Hatchethum" oninput="meleeDmg(10)">%
+                        Modifier: <input class="input" type="number" value="100" id="Metal Hatchetmod" oninput="meleeDmg(10), torpor(10, 0.5)">%<br>
+                        Melee: <input class="input" type="number" value="100" id="Metal Hatchethum" oninput="meleeDmg(10), torpor(10, 0.5)">%
                     </div>
                     <div class="column">
                         <br>
                         <img class="pic" src="images/Metal_Hatchet.png"><br>
                         <div id="Metal Hatchet"><script>meleeDmg(10)</script></div>
+                        <div id="Metal Hatchettorp"><script>torpor(10, 0.5)</script></div>
                     </div>
                 </div>
             </li>
@@ -198,31 +221,47 @@
                     </div>
                 </div>
             </li>
-            <li class="item float-item"> <!-- Crossbow-Stone 12 -->
+            <li class="item float-item"> <!-- Crossbow-Stone Arrow 12 -->
                 <div class="row">
                     <div class="column">
                         <h2><script>document.write(names[12])</script></h2>
                         Damage: <script>document.write(damage[12])</script><br>
-                        Modifier: <input class="input" type="number" value="100" id="Crossbow-Stonemod" oninput="gunDmg(12)">%<br>
+                        Modifier: <input class="input" type="number" value="100" id="Crossbow-Stone Arrowmod" oninput="gunDmg(12)">%<br>
                     </div>
                     <div class="column">
                         <br>
                         <img class="pic" src="images/Crossbow_Stone_Arrow.png"><br>
-                        <div id="Crossbow-Stone"><script>gunDmg(12)</script></div>
+                        <div id="Crossbow-Stone Arrow"><script>gunDmg(12)</script></div>
                     </div>
                 </div>
             </li>
-            <li class="item float-item"> <!-- Crossbow-Tranq 13 -->
+            <li class="item float-item"> <!-- Crossbow-Tranq Arrow 13 4.5 -->
                 <div class="row">
                     <div class="column">
                         <h2><script>document.write(names[13])</script></h2>
                         Damage: <script>document.write(damage[13])</script><br>
-                        Modifier: <input class="input" type="number" value="100" id="Crossbow-Tranqmod" oninput="gunDmg(13)">%<br>
+                        Modifier: <input class="input" type="number" value="100" id="Crossbow-Tranq Arrowmod" oninput="gunDmg(13), gunTorpor(13, 4.5)">%<br>
                     </div>
                     <div class="column">
                         <br>
                         <img class="pic" src="images/Crossbow_Tranq_Arrow.png"><br>
-                        <div id="Crossbow-Tranq"><script>gunDmg(13)</script></div>
+                        <div id="Crossbow-Tranq Arrow"><script>gunDmg(13)</script></div>
+                        <div id="Crossbow-Tranq Arrowtorp"><script>gunTorpor(13, 4.5)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Crossbow-Toxicant Arrow 36 5.143 -->
+                <div class="row">
+                    <div class="column">
+                        <h2><script>document.write(names[36])</script>&nbsp;<img class="mobile" src="images/mobile.png" alt="mobile"></h2>
+                        Damage: <script>document.write(damage[36])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Crossbow-Toxicant Arrowmod" oninput="gunDmg(36), gunTorpor(36, 5.143)">%<br>
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Crossbow_Toxicant_Arrow.png"><br>
+                        <div id="Crossbow-Toxicant Arrow"><script>gunDmg(36)</script></div>
+                        <div id="Crossbow-Toxicant Arrowtorp"><script>gunTorpor(36, 5.143)</script></div>
                     </div>
                 </div>
             </li>
@@ -270,45 +309,47 @@
                     </div>
                 </div>
             </li>
-            <li class="item float-item"> <!-- Longneck-Simple 17 -->
+            <li class="item float-item"> <!-- Longneck-Simple Rifle Ammo 17 -->
                 <div class="row">
                     <div class="column">
                         <h2><script>document.write(names[17])</script></h2>
                         Damage: <script>document.write(damage[17])</script><br>
-                        Modifier: <input class="input" type="number" value="100" id="Longneck-Simplemod" oninput="gunDmg(17)">%<br>
+                        Modifier: <input class="input" type="number" value="100" id="Longneck-Simple Rifle Ammomod" oninput="gunDmg(17)">%<br>
                     </div>
                     <div class="column">
                         <br>
                         <img class="pic" src="images/Longneck_Rifle_Simple_Ammo.png"><br>
-                        <div id="Longneck-Simple"><script>gunDmg(17)</script></div>
+                        <div id="Longneck-Simple Rifle Ammo"><script>gunDmg(17)</script></div>
                     </div>
                 </div>
             </li>
-            <li class="item float-item"> <!-- Longneck-Tranq Dart 18 -->
+            <li class="item float-item"> <!-- Longneck-Tranq Dart 18 8.5 -->
                 <div class="row">
                     <div class="column">
                         <h2><script>document.write(names[18])</script></h2>
                         Damage: <script>document.write(damage[18])</script><br>
-                        Modifier: <input class="input" type="number" value="100" id="Longneck-Tranq Dartmod" oninput="gunDmg(18)">%<br>
+                        Modifier: <input class="input" type="number" value="100" id="Longneck-Tranq Dartmod" oninput="gunDmg(18), gunTorpor(18, 8.5)">%<br>
                     </div>
                     <div class="column">
                         <br>
                         <img class="pic" src="images/Longneck_Rifle_Tranq_Dart.png"><br>
                         <div id="Longneck-Tranq Dart"><script>gunDmg(18)</script></div>
+                        <div id="Longneck-Tranq Darttorp"><script>gunTorpor(18, 8.5)</script></div>
                     </div>
                 </div>
             </li>
-            <li class="item float-item"> <!-- Longneck-Shocking 19 -->
+            <li class="item float-item"> <!-- Longneck-Shocking Tranq Dart 19 17 -->
                 <div class="row">
                     <div class="column">
                         <h2><script>document.write(names[19])</script></h2>
                         Damage: <script>document.write(damage[19])</script><br>
-                        Modifier: <input class="input" type="number" value="100" id="Longneck-Shockingmod" oninput="gunDmg(19)">%<br>
+                        Modifier: <input class="input" type="number" value="100" id="Longneck-Shocking Tranq Dartmod" oninput="gunDmg(19), gunTorpor(19, 17)">%<br>
                     </div>
                     <div class="column">
                         <br>
                         <img class="pic" src="images/Longneck_Rifle_Shocking_Tranq.png"><br>
-                        <div id="Longneck-Shocking"><script>gunDmg(19)</script></div>
+                        <div id="Longneck-Shocking Tranq Dart"><script>gunDmg(19)</script></div>
+                        <div id="Longneck-Shocking Tranq Darttorp"><script>gunTorpor(19, 17)</script></div>
                     </div>
                 </div>
             </li>
@@ -342,19 +383,19 @@
                     </div>
                 </div>
             </li>
-            <li class="item float-item"> <!-- Pump-Action 22 -->
+            <li class="item float-item"> <!-- Pump-Action Shotgun 22 -->
                 <div class="row">
                     <div class="column">
                         <h2><script>document.write(names[22])</script></h2>
                         Damage: <script>document.write(damage[22])</script><br>
                         Per Pellet (14): <script>document.write(damage[22] / 14)</script><br>
-                        Modifier: <input class="input" type="number" value="100" id="Pump-Actionmod" oninput="gunDmg(22), pelletDmg(22)">%<br>
+                        Modifier: <input class="input" type="number" value="100" id="Pump-Action Shotgunmod" oninput="gunDmg(22), pelletDmg(22)">%<br>
                     </div>
                     <div class="column">
                         <br>
                         <img class="pic" src="images/Pump-Action_Shotgun.png"><br>
-                        <div id="Pump-Action"><script>gunDmg(22)</script></div>
-                        <div id="Pump-Actionper"><script>pelletDmg(22)</script></div>
+                        <div id="Pump-Action Shotgun"><script>gunDmg(22)</script></div>
+                        <div id="Pump-Action Shotgunper"><script>pelletDmg(22)</script></div>
                     </div>
                 </div>
             </li>
@@ -372,45 +413,61 @@
                     </div>
                 </div>
             </li>
-            <li class="item float-item"> <!-- Compound Bow-Stone 24 -->
+            <li class="item float-item"> <!-- Compound Bow-Stone Arrow 24 -->
                 <div class="row">
                     <div class="column">
                         <h2><script>document.write(names[24])</script></h2>
                         Damage: <script>document.write(damage[24])</script><br>
-                        Modifier: <input class="input" type="number" value="100" id="Compound Bow-Stonemod" oninput="gunDmg(24)">%<br>
+                        Modifier: <input class="input" type="number" value="100" id="Compound Bow-Stone Arrowmod" oninput="gunDmg(24)">%<br>
                     </div>
                     <div class="column">
                         <br>
                         <img class="pic" src="images/Compound_Bow_Stone_Arrow.png"><br>
-                        <div id="Compound Bow-Stone"><script>gunDmg(24)</script></div>
+                        <div id="Compound Bow-Stone Arrow"><script>gunDmg(24)</script></div>
                     </div>
                 </div>
             </li>
-            <li class="item float-item"> <!-- Compound Bow-Tranq 25 -->
+            <li class="item float-item"> <!-- Compound Bow-Tranq Arrow 25 4.5 -->
                 <div class="row">
                     <div class="column">
                         <h2><script>document.write(names[25])</script></h2>
                         Damage: <script>document.write(damage[25])</script><br>
-                        Modifier: <input class="input" type="number" value="100" id="Compound Bow-Tranqmod" oninput="gunDmg(25)">%<br>
+                        Modifier: <input class="input" type="number" value="100" id="Compound Bow-Tranq Arrowmod" oninput="gunDmg(25), gunTorpor(25, 4.5)">%<br>
                     </div>
                     <div class="column">
                         <br>
                         <img class="pic" src="images/Compound_Bow_Tranq_Arrow.png"><br>
-                        <div id="Compound Bow-Tranq"><script>gunDmg(25)</script></div>
+                        <div id="Compound Bow-Tranq Arrow"><script>gunDmg(25)</script></div>
+                        <div id="Compound Bow-Tranq Arrowtorp"><script>gunTorpor(25, 4.5)</script></div>
                     </div>
                 </div>
             </li>
-            <li class="item float-item"> <!-- Compound Bow-Metal 26 -->
+            <li class="item float-item"> <!-- Compound Bow-Toxicant Arrow 37 8.8889 -->
+                <div class="row">
+                    <div class="column">
+                        <h2><script>document.write(names[37])</script>&nbsp;<img class="mobile" src="images/mobile.png" alt="mobile"></h2>
+                        Damage: <script>document.write(damage[37])</script><br>
+                        Modifier: <input class="input" type="number" value="100" id="Compound Bow-Toxicant Arrowmod" oninput="gunDmg(37), gunTorpor(37, 8.8889)">%<br>
+                    </div>
+                    <div class="column">
+                        <br>
+                        <img class="pic" src="images/Compound_Bow_Toxicant_Arrow.png"><br>
+                        <div id="Compound Bow-Toxicant Arrow"><script>gunDmg(37)</script></div>
+                        <div id="Compound Bow-Toxicant Arrowtorp"><script>gunTorpor(37, 8.8889)</script></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item float-item"> <!-- Compound Bow-Metal Arrow 26 -->
                 <div class="row">
                     <div class="column">
                         <h2><script>document.write(names[26])</script></h2>
                         Damage: <script>document.write(damage[26])</script><br>
-                        Modifier: <input class="input" type="number" value="100" id="Compound Bow-Metalmod" oninput="gunDmg(26)">%<br>
+                        Modifier: <input class="input" type="number" value="100" id="Compound Bow-Metal Arrowmod" oninput="gunDmg(26)">%<br>
                     </div>
                     <div class="column">
                         <br>
                         <img class="pic" src="images/Compound_Bow_Metal_Arrow.png"><br>
-                        <div id="Compound Bow-Metal"><script>gunDmg(26)</script></div>
+                        <div id="Compound Bow-Metal Arrow"><script>gunDmg(26)</script></div>
                     </div>
                 </div>
             </li>
@@ -428,48 +485,50 @@
                     </div>
                 </div>
             </li>
-            <li class="item float-item"> <!-- Electric Prod 28 -->
+            <li class="item float-item"> <!-- Electric Prod 28 266 -->
                 <div class="row">
                     <div class="column">
                         <h2><script>document.write(names[28])</script></h2>
                         Damage: <script>document.write(damage[28])</script><br>
-                        Modifier: <input class="input" type="number" value="100" id="Electric Prodmod" oninput="meleeDmg(28)">%<br>
-                        Melee: <input class="input" type="number" value="100" id="Electric Prodhum" oninput="meleeDmg(28)">%
+                        Modifier: <input class="input" type="number" value="100" id="Electric Prodmod" oninput="meleeDmg(28), torpor(28, 266)">%<br>
+                        Melee: <input class="input" type="number" value="100" id="Electric Prodhum" oninput="meleeDmg(28), torpor(28, 266)">%
                     </div>
                     <div class="column">
                         <br>
                         <img class="pic" src="images/Electric_Prod.png"><br>
                         <div id="Electric Prod"><script>meleeDmg(28)</script></div>
+                        <div id="Electric Prodtorp"><script>torpor(28, 266)</script></div>
                     </div>
                 </div>
             </li>
-            <li class="item float-item"> <!-- Any Ranged Melee Attack 29 -->
+            <li class="item float-item"> <!-- Any Ranged Melee Attack 29 1.4 -->
                 <div class="row">
                     <div class="column">
                         <h2><script>document.write(names[29])</script></h2>
                         Damage: <script>document.write(damage[29])</script><br>
-                        Modifier: <input class="input" type="number" value="100" id="Any Ranged Melee Attackmod" oninput="meleeDmg(29)">%<br>
-                        Melee: <input class="input" type="number" value="100" id="Any Ranged Melee Attackhum" oninput="meleeDmg(29)">%
+                        Modifier: <input class="input" type="number" value="100" id="Any Ranged Melee Attackmod" oninput="meleeDmg(29), torpor(29, 1.4)">%<br>
+                        Melee: <input class="input" type="number" value="100" id="Any Ranged Melee Attackhum" oninput="meleeDmg(29), torpor(29, 1.4)">%
                     </div>
                     <div class="column">
                         <br>
                         <img class="pic" src="images/Battle_Tartare.png"><br>
                         <div id="Any Ranged Melee Attack"><script>meleeDmg(29)</script></div>
+                        <div id="Any Ranged Melee Attacktorp"><script>torpor(29, 1.4)</script></div>
                     </div>
                 </div>
             </li>
-            <li class="item float-item"> <!-- Tek Gauntlets 30 -->
+            <li class="item float-item"> <!-- Tek Gauntlets (Chrg) 30 -->
                 <div class="row">
                     <div class="column">
                         <h2><script>document.write(names[30])</script></h2>
                         Damage: <script>document.write(damage[30])</script><br>
-                        Modifier: <input class="input" type="number" value="100" id="Tek Gauntletsmod" oninput="meleeDmg(30)">%<br>
-                        Melee: <input class="input" type="number" value="100" id="Tek Gauntletshum" oninput="meleeDmg(30)">%
+                        Modifier: <input class="input" type="number" value="100" id="Tek Gauntlets (Chrg)mod" oninput="meleeDmg(30)">%<br>
+                        Melee: <input class="input" type="number" value="100" id="Tek Gauntlets (Chrg)hum" oninput="meleeDmg(30)">%
                     </div>
                     <div class="column">
                         <br>
                         <img class="pic" src="images/Tek_Gauntlets.png"><br>
-                        <div id="Tek Gauntlets"><script>meleeDmg(30)</script></div>
+                        <div id="Tek Gauntlets (Chrg)"><script>meleeDmg(30)</script></div>
                     </div>
                 </div>
             </li>
@@ -488,18 +547,18 @@
                     </div>
                 </div>
             </li>
-            <li class="item float-item"> <!-- Tek Sword w Tek Gauntlets 32 -->
+            <li class="item float-item"> <!-- Tek Sword w/ Tek Gauntlets 32 -->
                 <div class="row">
                     <div class="column">
                         <h2><script>document.write(names[32])</script></h2>
                         Damage: <script>document.write(damage[32])</script><br>
-                        Modifier: <input class="input" type="number" value="100" id="Tek Sword w Tek Gauntletsmod" oninput="meleeDmg(32)">%<br>
-                        Melee: <input class="input" type="number" value="100" id="Tek Sword w Tek Gauntletshum" oninput="meleeDmg(32)">%
+                        Modifier: <input class="input" type="number" value="100" id="Tek Sword w/ Tek Gauntletsmod" oninput="meleeDmg(32)">%<br>
+                        Melee: <input class="input" type="number" value="100" id="Tek Sword w/ Tek Gauntletshum" oninput="meleeDmg(32)">%
                     </div>
                     <div class="column">
                         <br>
                         <img class="pic" src="images/Tek_Gauntlets_Tek_Sword.png"><br>
-                        <div id="Tek Sword w Tek Gauntlets"><script>meleeDmg(32)</script></div>
+                        <div id="Tek Sword w/ Tek Gauntlets"><script>meleeDmg(32)</script></div>
                     </div>
                 </div>
             </li>
@@ -534,10 +593,10 @@
         </ul>
         <!-- END--Hector Guo -->
         <br><br><br><br>
-        <footer>
-            <a href="https://ark.fandom.com/wiki/ARK_Survival_Evolved_Wiki"><img class="linkimg" src="images/fandom.png" alt="Ark: Fandom"></a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="https://www.dododex.com/"><img class="linkimg" src="images/dododex_egg.png" alt="Dododex"></a>
+        <footer> 
+            <a href="https://ark.fandom.com/wiki/ARK_Survival_Evolved_Wiki"><img class="linkimg" src="images/Ark_fandom.png" alt="Ark: Fandom"></a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.dododex.com/"><img class="linkimg" src="images/Dododex_logo.png" alt="Dododex"></a>
             <!-- For all your taming needs visit <a href="https://www.dododex.com/">Dododex</a> -->
             <br><br>
             <!-- For more information about Ark: Survival Evolved visit -->
