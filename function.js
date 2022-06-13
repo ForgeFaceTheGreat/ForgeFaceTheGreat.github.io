@@ -7,9 +7,12 @@ const names = ["Hands", "Stone Pick", "Torch", "Stone Hatchet", "Spear",
     "Electric Prod", "Any Ranged Melee Attack", "Tek Gauntlets (Chrg)", "Tek Sword",
     "Tek Sword w/ Tek Gauntlets", "Tek Rifle", "Tek Railgun", "Bow-Toxicant Arrow",
     "Crossbow-Toxicant Arrow", "Compound Bow-Toxicant Arrow"];
+    // 37 Items
+
 const damage = [8, 16, 15, 20, 30, 5, 14, 55, 20, 32, 40, 55, 95, 35, 63,
     50, 90, 280, 26, 26, 640, 50, 644, 47, 74, 27, 202.5, 165, 1, 10, 265,
     200, 280, 240, 935, 20, 35, 27]
+    // 37 Items
 
 function gunDmg(index)
 {
