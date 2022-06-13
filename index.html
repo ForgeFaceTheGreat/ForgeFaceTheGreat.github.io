@@ -26,14 +26,14 @@
                     <div class="column">
                         <h2><script>document.write(names[0])</script></h2>
                         Damage: <script>document.write(damage[0])</script><br>
-                        Modifier: <input class="input" type="number" value="100" id="Handsmod" oninput="meleeDmg(0), torpor(0, 1.75)">%<br>
-                        Melee: <input class="input" type="number" value="100" id="Handshum" oninput="meleeDmg(0), torpor(0, 1.75)">%
+                        <!-- Modifier: <input class="input" type="number" value="100" id="Handsmod" oninput="meleeDmg(0), torpor(0, 1.75)">%<br> -->
+                        Melee: <input class="input" type="number" value="100" id="Handshum" oninput="fistDmg(0), fistTorpor(0, 1.75)">%
                     </div>
                     <div class="column">
                         <br>
                         <img class="pic" src="images/Melee_Damage.png"><br>
-                        <div id="Hands"><script>meleeDmg(0)</script></div>
-                        <div id="Handstorp"><script>torpor(0, 1.75)</script></div>
+                        <div id="Hands"><script>fistDmg(0)</script></div>
+                        <div id="Handstorp"><script>fistTorpor(0, 1.75)</script></div>
                     </div>
                 </div>
             </li>

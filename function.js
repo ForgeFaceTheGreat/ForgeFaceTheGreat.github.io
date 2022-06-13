@@ -56,6 +56,26 @@ function torpor(index, torpMod)
     return document.getElementById(names[index] + "torp").innerHTML = "Torpor: " + torpor;
 }
 
+// Fist Calculation--------Start----------
+function fistDmg(index)
+{
+    var human = document.getElementById(names[index] + "hum").value;
+
+    var total = Math.round(((damage[index] * (human / 100)) + Number.EPSILON) * 100) / 100;
+
+    return document.getElementById(names[index]).innerHTML = "Total: " + total;
+}
+
+function fistTorpor(index, torpMod)
+{
+    var human = document.getElementById(names[index] + "hum").value;
+
+    var torpor = Math.round(((damage[index] * (human / 100) * torpMod) + Number.EPSILON) * 100) / 100;
+
+    return document.getElementById(names[index] + "torp").innerHTML = "Torpor: " + torpor;
+}
+// Fist Calculation--------End----------
+
 function gunTorpor(index, torpMod)
 {
     var mod = document.getElementById(names[index] + "mod").value;
